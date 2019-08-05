@@ -87,7 +87,7 @@ app.udp.handle('proxy.handle');
 ```bash
 // Test udp server by Linux
 $ echo "2019-05-20T15:30:57 testlog" | nc -u -w1 127.0.0.1 5000
-// check it in server log
+// Check it in server log
 udp server got: 2019-05-20T15:30:57 testlog from 127.0.0.1:5000
 ```
 

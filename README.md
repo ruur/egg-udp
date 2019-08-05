@@ -7,7 +7,7 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-udp.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-udp
-[travis-image]: https://img.shields.io/travis/eggjs/egg-udp.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/ruur/egg-udp.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ruur/egg-udp
 [snyk-image]: https://snyk.io/test/npm/egg-udp/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-udp

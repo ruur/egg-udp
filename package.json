@@ -1,7 +1,7 @@
 {
   "name": "egg-udp",
-  "version": "1.0.1",
-  "description": "Udp plugin for egg.",
+  "version": "1.0.2",
+  "description": "UDP plugin for egg.",
   "eggPlugin": {
     "name": "udp"
   },
@@ -41,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-udp.git"
+    "url": "git+https://github.com/ruur/egg-udp.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/ruur/egg-udp/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-udp#readme",
+  "homepage": "https://github.com/ruur/egg-udp#readme",
   "author": "ruur",
   "license": "MIT"
 }

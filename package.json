@@ -1,6 +1,6 @@
 {
   "name": "egg-udp",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "UDP plugin for egg.",
   "eggPlugin": {
     "name": "udp"

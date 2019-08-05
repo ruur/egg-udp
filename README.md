@@ -65,9 +65,7 @@ export default (app: Application) => {
       });
 
       udp.on('message', (msg, rinfo: Rinfo) => {
-        server.on('message', (msg, rinfo) => {
-  			console.log(`udp server got: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
-});
+        console.log(`udp server got: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
       });
 
       udp.on('listening', () => {

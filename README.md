@@ -2,8 +2,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
@@ -11,10 +9,6 @@
 [npm-url]: https://npmjs.org/package/egg-udp
 [travis-image]: https://img.shields.io/travis/eggjs/egg-udp.svg?style=flat-square
 [travis-url]: https://travis-ci.org/eggjs/egg-udp
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-udp.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-udp?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-udp.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-udp
 [snyk-image]: https://snyk.io/test/npm/egg-udp/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-udp
 [download-image]: https://img.shields.io/npm/dm/egg-udp.svg?style=flat-square

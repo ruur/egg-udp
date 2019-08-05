@@ -77,7 +77,9 @@ export default (app: Application) => {
     },
   };
 };
-  
+```
+
+```js
 // {app_root}/app/router.ts
 app.udp.handle('proxy.handle');
 ```

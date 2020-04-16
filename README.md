@@ -45,42 +45,68 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
+#### Router example
 ```js
-// {app_root}/app/udp/controller/proxy.ts
-import {  Application } from 'egg';
-import { Socket } from 'dgram';
-
-interface Rinfo {
-  address: string,
-  family: string,
-  port: number,
-  size: number,
-}
-
-export default (app: Application) => {
-  return {
-    async handle(udp: Socket) {
-      udp.on('error', (err) => {
-        console.log(`udp error:\n${err.stack}`);
-      });
-
-      udp.on('message', (msg, rinfo: Rinfo) => {
-        console.log(`udp server got: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
-      });
-
-      udp.on('listening', () => {
-        const address = udp.address();
-        console.log(`udp listening ${address.address}:${address.port}`);
-      });
-    },
-  };
-};
-```
-
-```js
-// {app_root}/app/router.ts
+// {app_root}/app/router.ts(or router.js)
 app.udp.handle('proxy.handle');
 ```
+
+#### Controller example
+* This is the example for javascript.
+    ```js
+    // {app_root}/app/udp/controller/proxy.js
+    module.exports = app => {
+      return {
+        async handle(udp) {
+          udp.on('error', (err) => {
+            console.log(`udp error:\n${err.stack}`);
+          });
+
+          udp.on('message', (msg, rinfo) => {
+            console.log(`udp server got: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
+          });
+
+          udp.on('listening', () => {
+            const address = udp.address();
+            console.log(`udp listening ${address.address}:${address.port}`);
+          });
+        },
+      };
+    };
+    ```
+
+* This is the example for typescript.
+    ```js
+    // {app_root}/app/udp/controller/proxy.ts
+    import {  Application } from 'egg';
+    import { Socket } from 'dgram';
+
+    interface Rinfo {
+      address: string,
+      family: string,
+      port: number,
+      size: number,
+    }
+
+    export default (app: Application) => {
+      return {
+        async handle(udp: Socket) {
+          udp.on('error', (err) => {
+            console.log(`udp error:\n${err.stack}`);
+          });
+
+          udp.on('message', (msg, rinfo: Rinfo) => {
+            console.log(`udp server got: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
+          });
+
+          udp.on('listening', () => {
+            const address = udp.address();
+            console.log(`udp listening ${address.address}:${address.port}`);
+          });
+        },
+      };
+    };
+    ```
 
 ## Test
 

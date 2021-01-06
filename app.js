@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const path = require('path');
+const os = require('os');
 const pluginName = 'udp';
 
 function resolveController(controller, app) {
@@ -26,7 +27,13 @@ function EggUdp(app) {
 
   const dgram = require('dgram');
   const udp = dgram.createSocket('udp4');
-  udp.bind(udpPort);
+  const platform = os.platform();
+  // if platform is Windows, add exclusive prop onto bind method
+  if (platform === 'win32') {
+    udp.bind({ port: udpPort, exclusive: true });
+  } else {
+    udp.bind(udpPort);
+  }
   this.udp = udp;
 }
 
